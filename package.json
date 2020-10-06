@@ -1,0 +1,16 @@
+{
+  "name": "retro",
+  "version": "1.0.0",
+  "description": "Converts MetroRetro to Confluence",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "author": "Pierre Rolland <pierre.rolland@openclassrooms.com>",
+  "license": "ISC",
+  "dependencies": {
+    "lodash": "^4.17.20",
+    "node-fetch": "^2.6.1",
+    "open": "^7.3.0"
+  }
+}

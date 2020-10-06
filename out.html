@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+</head>
+
+<body>
+    <section id="root" style="display: none">{{CONTENT}}</section>
+    <div>
+        Press any key to copy.<br>
+        It will open Google Spreadsheets, where you will hit CMD+V and CMD+C.<br>
+        Then, create a table in Confluence and paste the content.
+    </div>
+    <script type="text/javascript">
+        const setClipboard = str => {
+            function listener(e) {
+                e.preventDefault();
+                e.clipboardData.setData("text/html", str);
+                e.clipboardData.setData("text/plain", str);
+            }
+            document.addEventListener("copy", listener);
+            document.execCommand("copy");
+            document.removeEventListener("copy", listener);
+            window.location.replace('https://sheets.new');
+        }
+        document.onkeyup = () => setClipboard(document.getElementById("root").innerHTML);
+    </script>
+</body>
+
+</html>
