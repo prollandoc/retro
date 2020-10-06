@@ -44,7 +44,7 @@ const metroQuery = async path => (await fetch(`${METRO_RETRO_URL}/${path}`, {
 })).text();
 
 login().then(async () => {
-    const getNotesForAuthorAndCategory = (author, category) => '<ul>' + (content[category] || []).filter(i => i.author.name === author).map(i => `<li>${i.content}</li>`).join('') + '</ul>';
+    const getNotesForAuthorAndCategory = (author, category) => '<ul>' + (content[category] || []).filter(i => i.author.name === author && !!i.content).map(i => `<li>${i.content}</li>`).join('') + '</ul>';
     const getAuthorNotes = author => '<tr>' + keys(categories).map(i => `<td>${getNotesForAuthorAndCategory(author, i)}</td>`).join('') + '</tr>';
     const getAuthorHeader = author => '<tr>' + keys(categories).map(() => `<td style="background-color: ${authorsColor}">${author}</td>`).join('') + '</tr>';
 
@@ -56,6 +56,7 @@ login().then(async () => {
     }
 
     const content = JSON.parse(await metroQuery(`api/v1/boards/${board.id}/export?format=json&dl=1`));
+
     const authors = uniq(flatten(values(content)).map(i => i.author.name));
     const header = values(categories).reduce((previous, current) => previous + `<td style="background-color: ${current.color}"><h2>${current.title}</h2></td>`, '<table><tr>') + '</tr>';
     const body = authors.map(a => `${getAuthorHeader(a)}${getAuthorNotes(a)}`, '').join('') + '</table>';
