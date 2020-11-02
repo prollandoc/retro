@@ -24,5 +24,5 @@ _The MetroRetro board reference is available in the MetroRetro board url._
 The script will open a page in your browser. From this point on:
 - Hit a key, you'll be redirected to Google Spreadsheets
 - Hit CMD+V and then CMD+C
-- Open Confluence, create a new table and put the cursor in the first cell
-- Hit CMD+V
+- Open Confluence and paste
+
