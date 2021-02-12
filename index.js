@@ -48,7 +48,7 @@ login().then(async () => {
     const getAuthorNotes = author => '<tr>' + keys(categories).map(i => `<td>${getNotesForAuthorAndCategory(author, i)}</td>`).join('') + '</tr>';
     const getAuthorHeader = author => '<tr>' + keys(categories).map(() => `<td style="background-color: ${authorsColor}">${author}</td>`).join('') + '</tr>';
 
-    const board = JSON.parse(await metroQuery('api/v1/boards')).find(b => b.ref === process.argv[2]);
+    const board = JSON.parse(await metroQuery('api/v1/boards')).find(b => b.ref === process.argv[2] || b.id === process.argv[2]);
 
     if (!board) {
         console.error("Board not found");
