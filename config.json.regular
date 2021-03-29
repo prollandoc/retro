@@ -1,0 +1,25 @@
+{
+  "navigator": "google chrome",
+  "out_file": "/tmp/out.html",
+  "categories": {
+    "Good": {
+      "title": "What did we do well?",
+      "color": "#79f2c0"
+    },
+    "Bad": {
+      "title": "What should we have done better?",
+      "color": "#ffc400"
+    },
+    "Start": {
+      "title": "What do we want to start?",
+      "color": "#00c7e6"
+    },
+    "Stop": {
+      "title": "What do we want to stop?",
+      "color": "#ff5630"
+    }
+  },
+  "authorsColor": "#c1c7d0",
+  "metroEmail": "pierre.rolland@openclassrooms.com",
+  "metroPassword": ""
+}
