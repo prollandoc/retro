@@ -1,22 +1,60 @@
 {
   "navigator": "google chrome",
   "out_file": "/tmp/out.html",
-  "categories": {
+  "templates": {
     "Good": {
-      "title": "What did we do well?",
-      "color": "#79f2c0"
+      "Good": {
+        "title": "What did we do well?",
+        "color": "#79f2c0"
+      },
+      "Bad": {
+        "title": "What should we have done better?",
+        "color": "#ffc400"
+      },
+      "Start": {
+        "title": "What do we want to start?",
+        "color": "#00c7e6"
+      },
+      "Stop": {
+        "title": "What do we want to stop?",
+        "color": "#ff5630"
+      }
     },
-    "Bad": {
-      "title": "What should we have done better?",
-      "color": "#ffc400"
+    "Engine": {
+      "Engine": {
+        "title": "What is driving us forwards?",
+        "color": "#79f2c0"
+      },
+      "Parachute": {
+        "title": "What is slowing us down?",
+        "color": "#ffc400"
+      },
+      "Bridge": {
+        "title": "What can we do to overcome the risks?",
+        "color": "#00c7e6"
+      },
+      "Abyss": {
+        "title": "What are the risks coming up?",
+        "color": "#ff5630"
+      }
     },
-    "Start": {
-      "title": "What do we want to start?",
-      "color": "#00c7e6"
-    },
-    "Stop": {
-      "title": "What do we want to stop?",
-      "color": "#ff5630"
+    "Sunny Skies": {
+      "Sunny Skies": {
+        "title": "What positive things are coming up?",
+        "color": "#00c7e6"
+      },
+      "Hot Air": {
+        "title": "What are the things pushing us along?",
+        "color": "#79f2c0"
+      },
+      "Storm Clouds": {
+        "title": "What problems or obstacles are coming up?",
+        "color": "#ffc400"
+      },
+      "Sandbags": {
+        "title": "What is slowing us down or holding us back?",
+        "color": "#ff5630"
+      }
     }
   },
   "authorsColor": "#c1c7d0",
