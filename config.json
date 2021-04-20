@@ -55,6 +55,24 @@
         "title": "What is slowing us down or holding us back?",
         "color": "#ff5630"
       }
+    },
+    "Drop": {
+      "Drop": {
+        "title": "What do you think the team should drop?",
+        "color": "#ff5630"
+      },
+      "Add": {
+        "title": "What do you think the team should add?",
+        "color": "#79f2c0"
+      },
+      "Keep": {
+        "title": "What do you think the team should keep?",
+        "color": "#00c7e6"
+      },
+      "Improve": {
+        "title": "What do you think the team should improve?",
+        "color": "#ffc400"
+      }
     }
   },
   "authorsColor": "#c1c7d0",
