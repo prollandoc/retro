@@ -73,6 +73,28 @@
         "title": "What do you think the team should improve?",
         "color": "#ffc400"
       }
+    },
+    "Keep Doing": {
+      "Keep Doing": {
+        "title": "What should we keep doing?",
+        "color": "#79f2c0"
+      },
+      "Start Doing": {
+        "title": "What should we start doing?",
+        "color": "#00c7e6"
+      },
+      "Stop Doing": {
+        "title": "What should we stop doing?",
+        "color": "#ff5630"
+      },
+      "More Of": {
+        "title": "What should we do more of?",
+        "color": "#9afce2"
+      },
+      "Less Of": {
+        "title": "What should we do less of?",
+        "color": "#ffc400"
+      }
     }
   },
   "authorsColor": "#c1c7d0",
