@@ -71,8 +71,6 @@ login().then(async () => {
 
     const templateKey = guessTemplate(content);
 
-
-
     if (!templateKey) {
         console.error("Oops, we don't know this MetroRetro template yet :/");
         process.exit(-1);
