@@ -95,6 +95,24 @@
         "title": "What should we do less of?",
         "color": "#ffc400"
       }
+    },
+    "Super Mario": {
+      "Block": {
+        "title": "What are the future exciting stuff coming?",
+        "color": "#00bcd4"
+      },
+      "Bomb": {
+        "title": "What are the future potential risks?",
+        "color": "#ff9800"
+      },
+      "Mushroom": {
+        "title": "What made us move forward?",
+        "color": "#4baf4f"
+      },
+      "Goomba": {
+        "title": "What made us slow down?",
+        "color": "#f44335"
+      }
     }
   },
   "authorsColor": "#c1c7d0",

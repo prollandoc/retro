@@ -4,6 +4,7 @@ const open = require('open');
 const process = require('process');
 const { keys, flatten, uniq, values } = require('lodash');
 const { authorsColor, metroEmail: configMetroEmail, metroPassword: configMetroPassword, navigator, out_file, templates } = require('./config.json');
+const templateNames = keys(templates);
 const METRO_RETRO_URL = 'https://metroretro.io';
 const TPL_FILE = `${__dirname}/out.html`;
 
@@ -44,7 +45,17 @@ const metroQuery = async path => (await fetch(`${METRO_RETRO_URL}/${path}`, {
 })).text();
 
 login().then(async () => {
-    const guessTemplate = c => keys(templates).find(key => typeof c[key] !== 'undefined');
+    const guessTemplate = (metroContent) => {
+        const metroContentSectionNames = keys(metroContent);
+
+        return templateNames.find((templateName) => {
+            const templateSectionNames = keys(templates[templateName]);
+
+            return templateSectionNames.every((templateSectionName) => (
+              metroContentSectionNames.includes(templateSectionName)
+            ));
+        });
+    };
     const getNotesForAuthorAndCategory = (author, category) => '<ul>' + (content[category] || []).filter(i => i.author.name === author && !!i.content).map(i => `<li>${i.content}</li>`).join('') + '</ul>';
     const getAuthorNotes = author => '<tr>' + keys(categories).map(i => `<td>${getNotesForAuthorAndCategory(author, i)}</td>`).join('') + '</tr>';
     const getAuthorHeader = author => '<tr>' + keys(categories).map(() => `<td style="background-color: ${authorsColor}">${author}</td>`).join('') + '</tr>';
