@@ -56,9 +56,6 @@ login().then(async () => {
             ));
         });
     };
-    const getNotesForAuthorAndCategory = (author, category) => '<ul>' + (content[category] || []).filter(i => i.author.name === author && !!i.content).map(i => `<li>${i.content}</li>`).join('') + '</ul>';
-    const getAuthorNotes = author => '<tr>' + keys(categories).map(i => `<td>${getNotesForAuthorAndCategory(author, i)}</td>`).join('') + '</tr>';
-    const getAuthorHeader = author => '<tr>' + keys(categories).map(() => `<td style="background-color: ${authorsColor}">${author}</td>`).join('') + '</tr>';
 
     const board = JSON.parse(await metroQuery('api/v1/boards')).find(b => b.ref === process.argv[2] || b.id === process.argv[2]);
 
@@ -76,11 +73,58 @@ login().then(async () => {
         process.exit(-1);
     }
 
-    const categories = templates[templateKey];
-    const authors = uniq(flatten(values(content)).map(i => i.author.name));
-    const header = values(categories).reduce((previous, current) => previous + `<td style="background-color: ${current.color}"><h2>${current.title}</h2></td>`, '<table><tr>') + '</tr>';
-    const body = authors.map(a => `${getAuthorHeader(a)}${getAuthorNotes(a)}`, '').join('') + '</table>';
-    const out = fs.readFileSync(TPL_FILE, { encoding: 'utf8' }).replace('{{CONTENT}}', header + body);
+    const sections = values(templates[templateKey]);
+    const sectionNames = keys(templates[templateKey]);
+
+    const getAuthorHeaderRow = (authorName) => `<tr>
+        ${`<th style="background-color: ${authorsColor}">${authorName}</th>`.repeat(sections.length)}
+    </tr>`;
+
+    const getNotesFromAuthorNameAndSectionName = (authorName, sectionName) => {
+        const sectionNotes = content[sectionName] || [];
+        const authorNotes = sectionNotes.filter(({ author, content }) => Boolean(content) && author.name === authorName);
+
+        if (!authorNotes.length) {
+            return '';
+        }
+
+        return `<ul>
+            ${authorNotes
+                .filter(({ content }) => Boolean(content))
+                .map(({ content }) => `<li>${content}</li>`)
+                .join('')}
+        </ul>`;
+    };
+
+    const getAuthorNotesRow = (authorName) => (
+        `<tr>
+            ${sectionNames.map((sectionName) => (
+              `<td>${getNotesFromAuthorNameAndSectionName(authorName, sectionName)}</td>`
+            )).join('')}
+        </tr>`
+    );
+
+    const authorNames = uniq(flatten(values(content)).map(({ author }) => author.name));
+
+    const tableHeader = `
+        <thead>
+            ${sections.map(({ title, color }) => (
+              `<th style="background-color: ${color}">${title}</th>`
+            )).join('')}
+        </thead>
+    `;
+
+    const tableBody = `
+        <tbody>
+            ${authorNames.map((authorName) => (
+                getAuthorHeaderRow(authorName) + getAuthorNotesRow(authorName)
+            )).join('')}
+        </tbody>
+    `;
+
+    const table = `<table>${tableHeader}${tableBody}</table>`;
+
+    const out = fs.readFileSync(TPL_FILE, { encoding: 'utf8' }).replace('{{CONTENT}}', table);
     fs.writeFileSync(out_file, out);
     open(out_file, { app: navigator, wait: false });
 });
