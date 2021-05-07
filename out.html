@@ -2,29 +2,75 @@
 <html>
 
 <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
+    <title>Your MetroRetro summary</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com"/>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap" rel="stylesheet"/>
+    <style>
+        :root {
+            font-size: 20px;
+        }
+
+        #popin {
+            position: fixed;
+            background-color: rgba(0,0,0,.8);
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1rem;
+        }
+
+        #popin-content {
+            background-color: #f3f3f3;
+            padding: 30px;
+            text-align: center;
+            border-radius: 20px;
+            font-size: 1rem;
+        }
+
+        #copy-button {
+            font-size: 1.2rem;
+            text-transform: uppercase;
+        }
+
+        #root {
+            font-size: .8rem;
+        }
+    </style>
 </head>
 
 <body>
-    <section id="root" style="display: none">{{CONTENT}}</section>
-    <div>
-        Press any key to copy.<br>
-        It will open Google Spreadsheets, where you will hit CMD+V and CMD+C.<br>
-        Then, paste the content in Confluence.
+    <section id="root">{{CONTENT}}</section>
+    <div id="popin">
+        <div id="popin-content">
+            <p><strong>Your table has been generated!</strong></p>
+            <p>
+                Click on the button below to copy it to your clipboard.<br />
+                Then, you can paste the content directly in Confluence.
+            </p>
+            <button type="button" id="copy-button">Copy</button>
+        </div>
     </div>
     <script type="text/javascript">
+        const button = document.getElementById('copy-button');
+
         const setClipboard = str => {
             function listener(e) {
                 e.preventDefault();
                 e.clipboardData.setData("text/html", str);
                 e.clipboardData.setData("text/plain", str);
+                button.innerHTML = 'Copied! 👍'
             }
             document.addEventListener("copy", listener);
             document.execCommand("copy");
             document.removeEventListener("copy", listener);
-            window.location.replace('https://sheets.new');
         }
-        document.onkeyup = () => setClipboard(document.getElementById("root").innerHTML);
+        button.onclick = () => setClipboard(document.getElementById("root").innerHTML);
     </script>
 </body>
 
