@@ -2,7 +2,7 @@
 
 ## Overview
 
-This script will download your sticky notes from MetroRetro, convert them to a table, and, with a small trick using Google Spreadsheets, make them renderable into Confluence.
+This script will download your sticky notes from MetroRetro, convert them to a table and make them renderable into Confluence.
 
 ## Installation
 
@@ -11,18 +11,22 @@ git clone https://github.com/prollandoc/retro.git && cd retro
 npm install
 ```
 
-Copy your MetroRetro credentials into `config.json`
-
 ## Use
+
+Copy your MetroRetro credentials into `config.json`
 
 ```bash
 npm start YOUR_METRORETRO_BOARD_REFERENCE
 ```
 
+_OR_
+
+```bash
+npm start YOUR_METRORETRO_BOARD_REFERENCE YOUR_METRORETRO_USERNAME YOUR_METRORETRO_PASSWORD 
+```
+
 _The MetroRetro board reference is available in the MetroRetro board url._
 
 The script will open a page in your browser. From this point on:
-- Hit a key, you'll be redirected to Google Spreadsheets
-- Hit CMD+V and then CMD+C
+- Click the Copy button
 - Open Confluence and paste
-
