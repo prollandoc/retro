@@ -113,6 +113,24 @@
         "title": "What made us slow down?",
         "color": "#f44335"
       }
+    },
+    "Sail": {
+      "Goal": {
+        "title": "What are we working towards",
+        "color": "#00bcd4"
+      },
+      "Wind": {
+        "title": "What is pushing us forwards?",
+        "color": "#4baf4f"
+      },
+      "Rocks": {
+        "title": "What risk do we face ?",
+        "color": "#ff9800"
+      },
+      "Anchor": {
+        "title": "What is holding us back ?",
+        "color": "#f44335"
+      }
     }
   },
   "authorsColor": "#c1c7d0",

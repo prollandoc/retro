@@ -9,7 +9,7 @@
   "author": "Pierre Rolland <pierre.rolland@openclassrooms.com>",
   "license": "ISC",
   "dependencies": {
-    "lodash": "^4.17.20",
+    "lodash": "^4.17.21",
     "node-fetch": "^2.6.1",
     "open": "^7.3.0"
   }
