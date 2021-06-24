@@ -22,7 +22,7 @@ const login = async () => {
     params.append('email', process.argv.length === 5 ? process.argv[3] : configMetroEmail);
     params.append('password', process.argv.length === 5 ? process.argv[4] : configMetroPassword);
 
-    const result = await fetch(`${METRO_RETRO_URL}/login/email`, {
+    const result = await fetch(`${METRO_RETRO_URL}/login`, {
         method: 'post',
         body: params
     });
