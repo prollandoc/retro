@@ -131,6 +131,20 @@
         "title": "What is holding us back ?",
         "color": "#f44335"
       }
+    },
+    "Super Power": {
+      "Super Power": {
+        "title": "What are our Super Powers?",
+        "color": "#79f2c0"
+      },
+      "Weakness": {
+        "title": "What are our weaknesses?",
+        "color": "#ff5630"
+      },
+      "Sidekick": {
+        "title": "Who do we need as our sidekick?",
+        "color": "#00c7e6"
+      }
     }
   },
   "authorsColor": "#c1c7d0",
