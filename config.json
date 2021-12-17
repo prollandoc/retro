@@ -163,6 +163,52 @@
         "title": "Add praise for the actions of your colleagues.",
         "color": "#00c7e6"
       }
+    },
+    "Santa": {
+      "Sleepy Santa": {
+        "title": "Sleepy Santa",
+        "color": "#f44335"
+      },
+      "Happy Snowman": {
+        "title": "Happy Snowman",
+        "color": "#00bcd4"
+      },
+      "Sassy Scrooge": {
+        "title": "Sassy Scrooge",
+        "color": "#ff5630"
+      },
+      "Busy Elf": {
+        "title": "Busy Elf",
+        "color": "#4baf4f"
+      },
+      "Energized Reindeer": {
+        "title": "Energized Reindeer",
+        "color": "#ffc400"
+      },
+      "Good - presents": {
+        "title": "What were our gifts?",
+        "color": "#00bcd4"
+      },
+      "Support - Elves": {
+        "title": "Who were our helpers?",
+        "color": "#4baf4f"
+      },
+      "Bad- Grinch": {
+        "title": "What was our Grinch?",
+        "color": "#ff5630"
+      },
+      "Past - regret": {
+        "title": "Write one regret from the past year.",
+        "color": "#00bcd4"
+      },
+      "Present - Appreciation": {
+        "title": "Write down some things you appreciate about your team.",
+        "color": "#4baf4f"
+      },
+      "Future - goal": {
+        "title": "Write out at least one goal you have for the next year.",
+        "color": "#ff5630"
+      }
     }
   },
   "authorsColor": "#c1c7d0",
