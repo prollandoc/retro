@@ -209,6 +209,24 @@
         "title": "Write out at least one goal you have for the next year.",
         "color": "#ff5630"
       }
+    },
+    "Mario Kart": {
+      "Super Star": {
+        "title": "⭐ Make us move forward",
+        "color": "#ffface"
+      },
+      "Mushroom": {
+        "title": "\uD83C\uDF44 Make us speed up",
+        "color": "#4caf50"
+      },
+      "Banana": {
+        "title": "\uD83C\uDF4C Make us slow down",
+        "color": "#fdd0cd"
+      },
+      "Bob-Omb": {
+        "title": "\uD83D\uDCA3 Make us back down",
+        "color": "#bfbfbf"
+      }
     }
   },
   "authorsColor": "#c1c7d0",
