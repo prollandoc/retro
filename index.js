@@ -46,11 +46,10 @@ const metroQuery = async path => (await fetch(`${METRO_RETRO_URL}/${path}`, {
 
 login().then(async () => {
     const guessTemplate = (metroContent) => {
-        const metroContentSectionNames = keys(metroContent);
+        const metroContentSectionNames = keys(metroContent).filter((key) => Boolean(key));
 
         return templateNames.find((templateName) => {
             const templateSectionNames = keys(templates[templateName]);
-
             return templateSectionNames.every((templateSectionName) => (
               metroContentSectionNames.includes(templateSectionName)
             ));
