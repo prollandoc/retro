@@ -132,6 +132,84 @@
         "color": "#f44335"
       }
     },
+    "Super Power": {
+      "Super Power": {
+        "title": "What are our Super Powers?",
+        "color": "#79f2c0"
+      },
+      "Weakness": {
+        "title": "What are our weaknesses?",
+        "color": "#ff5630"
+      },
+      "Sidekick": {
+        "title": "Who do we need as our sidekick?",
+        "color": "#00c7e6"
+      }
+    },
+    "Thumbs": {
+      "Thumbs Up": {
+        "title": "Add things that you thought were good.",
+        "color": "#79f2c0"
+      },
+      "Thumbs Down": {
+        "title": "Add things that you thought were bad.",
+        "color": "#ff5630"
+      },
+      "New Ideas": {
+        "title": "Add new ideas that would help improve the team.",
+        "color": "#ffc400"
+      },
+      "Recognition": {
+        "title": "Add praise for the actions of your colleagues.",
+        "color": "#00c7e6"
+      }
+    },
+    "Santa": {
+      "Sleepy Santa": {
+        "title": "Sleepy Santa",
+        "color": "#f44335"
+      },
+      "Happy Snowman": {
+        "title": "Happy Snowman",
+        "color": "#00bcd4"
+      },
+      "Sassy Scrooge": {
+        "title": "Sassy Scrooge",
+        "color": "#ff5630"
+      },
+      "Busy Elf": {
+        "title": "Busy Elf",
+        "color": "#4baf4f"
+      },
+      "Energized Reindeer": {
+        "title": "Energized Reindeer",
+        "color": "#ffc400"
+      },
+      "Good - presents": {
+        "title": "What were our gifts?",
+        "color": "#00bcd4"
+      },
+      "Support - Elves": {
+        "title": "Who were our helpers?",
+        "color": "#4baf4f"
+      },
+      "Bad- Grinch": {
+        "title": "What was our Grinch?",
+        "color": "#ff5630"
+      },
+      "Past - regret": {
+        "title": "Write one regret from the past year.",
+        "color": "#00bcd4"
+      },
+      "Present - Appreciation": {
+        "title": "Write down some things you appreciate about your team.",
+        "color": "#4baf4f"
+      },
+      "Future - goal": {
+        "title": "Write out at least one goal you have for the next year.",
+        "color": "#ff5630"
+      }
+    },
     "Mario Kart": {
       "Super Star": {
         "title": "⭐ Make us move forward",
