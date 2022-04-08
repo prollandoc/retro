@@ -227,6 +227,24 @@
         "title": "\uD83D\uDCA3 Make us back down",
         "color": "#bfbfbf"
       }
+    },
+    "Lacked": {
+      "Lacked": {
+        "title": "Things that you were lacking",
+        "color": "#ff5630"
+      },
+      "Liked": {
+        "title": "Things that you liked",
+        "color": "#79f2c0"
+      },
+      "Longed For": {
+        "title": "Things that you wish had happened",
+        "color": "#ffc400"
+      },
+      "Learned": {
+        "title": "Things that you learned",
+        "color": "#00c7e6"
+      }
     }
   },
   "authorsColor": "#c1c7d0",
