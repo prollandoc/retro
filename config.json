@@ -245,9 +245,23 @@
         "title": "Things that you learned",
         "color": "#00c7e6"
       }
+    },
+    "Glad Sad Mad": {
+      "Glad": {
+        "title": "What are you glad about ?",
+        "color": "#79f2c0"
+      },
+      "Sad": {
+        "title": "What are you sad about ?",
+        "color": "#ffc400"
+      },
+      "Mad": {
+        "title": "What are you mad about ?",
+        "color": "#ff5630"
+      }
     }
   },
   "authorsColor": "#c1c7d0",
-  "metroEmail": "pierre.rolland@openclassrooms.com",
+  "metroEmail": "firstname.lastname@openclassrooms.com",
   "metroPassword": "your metro retro password"
 }
