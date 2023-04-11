@@ -259,6 +259,20 @@
         "title": "What are you mad about ?",
         "color": "#ff5630"
       }
+    },
+    "Plus Minus Interesting": {
+        "Plus": {
+            "title": "What went well?",
+            "color": "#79f2c0"
+        },
+        "Minus": {
+            "title": "What went wrong?",
+            "color": "#ff5630"
+        },
+        "Interesting": {
+            "title": "What was interesting?",
+            "color": "#00c7e6"
+        }
     }
   },
   "authorsColor": "#c1c7d0",
